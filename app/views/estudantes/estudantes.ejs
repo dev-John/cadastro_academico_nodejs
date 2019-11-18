@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8" />
+	<title>Estudantes</title>
+</head>
+<body>
+	<h1>Estudantes</h1>
+	<table>
+		<tr>
+			<th>Nome</th>
+			<th>Nota</th>
+		</tr>
+		<% for(let i=0; i<estudantes.length; i++) {%>
+		<tr>
+			<td><%= estudantes[i].nome %></td>
+			<td><%= estudantes[i].nota %></td>
+		</tr>
+		<% } %>
+	</table>
+</body>
+</html>

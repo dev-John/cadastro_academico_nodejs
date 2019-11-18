@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8" />
+	<title>Professores</title>
+</head>
+<body>
+	<h1>Professores</h1>
+	<table>
+		<tr>
+			<th>Nome</th>
+			<th>Titulacao</th>
+			<!-- <th>Horario Cadastro</th> -->
+		</tr>
+		<% for(let i=0; i<professores.length; i++) {%>
+		<tr>
+			<td><%= professores[i].nome %></td>
+			<td><%= professores[i].titulacao %></td>
+			<!-- <td><%= professores[i].timestamp %></td> -->
+		</tr>
+		<% } %>
+	</table>
+</body>
+</html>
