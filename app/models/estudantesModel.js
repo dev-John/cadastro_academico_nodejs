@@ -10,5 +10,9 @@ module.exports = function(){
         connection.query(sql,callback);
     }
 
+    this.storeEstudante = function(estudante, connection, callback){
+        connection.query('insert into estudantes set ?',estudante, callback);
+    }
+
     return this;
 }

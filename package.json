@@ -9,6 +9,7 @@
   "author": "André Luís Bordignon",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "consign": "^0.1.6",
     "ejs": "^2.6.1",
     "express": "^4.16.3",

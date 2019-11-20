@@ -5,7 +5,7 @@ module.exports = function(app){
         let connection = app.config.dbConnection();
         let estudantesModel = app.app.models.estudantesModel;
 
-        estudantesModel.getEstudantesId1(connection, function(error,result){
+        estudantesModel.getEstudantes(connection, function(error,result){
             res.render('estudantes/estudantes',{estudantes:result});
         })
 	});
