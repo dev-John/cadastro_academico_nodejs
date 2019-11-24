@@ -5,6 +5,7 @@ let app = express();
 
 app.set('view engine', 'ejs'); 
 app.set('views', './app/views');
+app.use('/public', express.static('public'));
 app.use(body_parser.urlencoded({extended:true}));
 
 consign().include('app/routes')

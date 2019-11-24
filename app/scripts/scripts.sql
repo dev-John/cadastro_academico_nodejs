@@ -21,3 +21,13 @@ insert into estudantes (nome, nota) values('Roberto Santos', 10);
 insert into estudantes (nome, nota) values('Ana Maria', 10);
 
 select * from estudantes;
+
+CREATE TABLE `dsw`.`conteudoprogramatico` ( 
+	`idconteudoprogramatico` INT NOT NULL AUTO_INCREMENT,  
+    `conteudo` VARCHAR(200) NOT NULL,  
+    `data` DATE NULL,    
+    `timestamp` TIMESTAMP, 
+    PRIMARY KEY (`idconteudoprogramatico`)
+);	
+
+select * from conteudoprogramatico;

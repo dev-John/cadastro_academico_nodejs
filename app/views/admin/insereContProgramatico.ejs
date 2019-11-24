@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+	<html lang="pt-br">
+		<head>
+			<meta charset="utf-8"/>
+            <title>Formulário de Inclusão de Conteúdo Programático</title>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+            <link rel="stylesheet" type="text/css" href="/public/assets/styles.css" />
+		</head>
+	<body>
+        <form action="conteudoProgramatico/salvar" method="post">
+            <div class="container jumbotron custom-jumbo">
+                <h1 class="display-4">Incluir Conteúdo Programático</h1>
+                <hr class="my-4">
+                <div class="form-group">
+                    <label for="conteudo">Conteúdo:</label>
+                    <input class="form-control" type="text" name="conteudo" placeholder="Conteúdo">
+                </div>
+                <div class="form-group">
+                    <label for="data">Data:</label>
+                    <input type="date" class="date-input" name="data" id="data">
+                </div>
+                <input type="submit" class="btn btn-primary btn-lg" value="Enviar">
+            </div>
+			
+        </form>
+        <hr class="my-4">
+        
+        <div class="container">
+            <table class="table table-hover">
+                <tr>
+                    <th>Conteúdo</th>
+                    <th>Data</th>
+                    <th>Ação</th>
+                </tr>
+                <% for(let i=0; i<conts.length; i++) {%>
+                <tr>
+                    <td><%= conts[i].conteudo %></td>
+                    <td><%= conts[i].data %></td>
+                    <td><button class="btn btn-danger">X</button></td>
+                </tr>
+                <% } %>
+            </table>
+        </div>
+
+	</body>
+</html>

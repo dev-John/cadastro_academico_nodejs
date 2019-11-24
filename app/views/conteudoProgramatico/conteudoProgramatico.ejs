@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8" />
+	<title>Conteudo Programático</title>
+</head>
+<body>
+	<h1>Conteudo Programático</h1>
+	<table>
+		<tr>
+			<th>Conteúdo</th>
+			<th>Data</th>
+		</tr>
+		<% for(let i=0; i<conts.length; i++) {%>
+		<tr>
+			<td><%= conts[i].conteudo %></td>
+			<td><%= conts[i].data %></td>
+		</tr>
+		<% } %>
+	</table>
+</body>
+</html>
