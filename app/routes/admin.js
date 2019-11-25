@@ -17,5 +17,17 @@ module.exports = function(app){
 		contProgModel.storeConteudo(conteudo, connection, function (error, result) {
 			res.redirect('/conteudoProgramatico');
 		});
-    })
+	});
+	
+	app.post('/conteudoProgramatico/excluir', function(req,res){
+		let id = req.body.id;
+		let connection = app.config.dbConnection();
+		let deleteContProgModel = app.app.models.conteudoProgramaticoModel;
+
+		deleteContProgModel.deleteConteudo(id, connection, function(error, result) {
+			res.redirect('/conteudoProgramatico');
+		});
+	})
+
+	// conts[i].idconteudoprogramatico
 }

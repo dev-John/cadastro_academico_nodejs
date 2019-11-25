@@ -6,7 +6,7 @@ module.exports = function(app){
         let conteudoProgramaticoModel = app.app.models.conteudoProgramaticoModel;
 
         conteudoProgramaticoModel.getConteudos(connection, function(error,result){
-            res.render('admin/insereContProgramatico',{conts:result}); //view/ejs
+            res.render('admin/conteudoProgramatico',{conts:result}); //view/ejs
         })
 	});
 }
