@@ -13,9 +13,29 @@
 			<p class="lead">Página inicial da disciplina DSW - Desenvolvimento de Sistemas Web</p>
 			<hr class="my-4">
 			<p>Escolha uma opção</p>
-			<button type="button" class="btn btn-primary btn-lg" href="/insere_estudante">Inserir Estudante</button>
-			<button type="button" class="btn btn-primary btn-lg">Listar Notas</button>
-			<button type="button" class="btn btn-primary btn-lg">Listar Professores</button>
+
+			<div class="row">
+				<div class="col-xs-1 ml-2">
+					<form action="insere_estudante" method="GET">
+						<input type="submit" class="btn btn-primary btn-lg" value="Cadastrar Estudante">
+					</form>
+				</div>
+				<div class="col-xs-1 ml-2">
+					<form action="conteudoProgramatico" method="GET">
+						<input type="submit" class="btn btn-primary btn-lg" value="Cadastrar Conteúdo Programático">
+					</form>
+				</div>
+				<div class="col-xs-1 ml-2">
+					<form action="/notas" method="GET">
+						<input type="submit" class="btn btn-primary btn-lg" value="Listar Notas">
+					</form>
+				</div>
+				<div class="col-xs-1 ml-2">
+					<form action="/professores" method="GET">
+						<input type="submit" class="btn btn-primary btn-lg" value="Listar Professores">
+					</form>
+				</div>
+			</div>
 		  </div>
 
 	</body>

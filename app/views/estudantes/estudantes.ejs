@@ -3,20 +3,29 @@
 <head>
 	<meta charset="utf-8" />
 	<title>Estudantes</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="/public/assets/styles.css" />
 </head>
 <body>
-	<h1>Estudantes</h1>
-	<table>
-		<tr>
-			<th>Nome</th>
-			<th>Nota</th>
-		</tr>
-		<% for(let i=0; i<estudantes.length; i++) {%>
-		<tr>
-			<td><%= estudantes[i].nome %></td>
-			<td><%= estudantes[i].nota %></td>
-		</tr>
-		<% } %>
-	</table>
+
+	<div class="container jumbotron custom-jumbo jumbo-padding">
+		<h1 class="display-4">Estudantes</h1>
+		<hr class="my-4">
+	</div>
+
+	<div class="container">	
+		<table class="table table-hover">
+			<tr>
+				<th>Nome</th>
+				<th>Nota</th>
+			</tr>
+			<% for(let i=0; i<estudantes.length; i++) {%>
+			<tr>
+				<td><%= estudantes[i].nome %></td>
+				<td><%= estudantes[i].nota %></td>
+			</tr>
+			<% } %>
+		</table>
+	</div>
 </body>
 </html>

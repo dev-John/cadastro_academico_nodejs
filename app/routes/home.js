@@ -3,7 +3,16 @@ module.exports = function(app){
 		res.render('home/index');
 	});
 
-	app.post('inserir_estudante', function(req,res){
+	app.post('inserirEstudantes', function(req,res){
 		res.render('admin/insere_estudante');
+	})
+
+	app.post('listarNotas', function(req,res){
+		console.log("eeee")
+		res.render('/notas');
+	})
+
+	app.post('listarProfessores', function(req,res){
+		res.render('professores/professores');
 	})
 }
