@@ -20,6 +20,8 @@ insert into estudantes (nome, nota) values('Vera Lucia', 10);
 insert into estudantes (nome, nota) values('Roberto Santos', 10);
 insert into estudantes (nome, nota) values('Ana Maria', 10);
 
+delete from estudantes;
+
 select * from estudantes;
 
 CREATE TABLE `dsw`.`conteudoprogramatico` ( 

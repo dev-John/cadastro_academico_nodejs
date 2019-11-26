@@ -2,11 +2,9 @@
 module.exports = function(app){
 	app.get('/estudantes', function (req, res) {
 
-        let connection = app.config.dbConnection();
-        let estudantesModel = app.app.models.estudantesModel;
+        let controller = app.app.controllers.estudantesController;
 
-        estudantesModel.getEstudantes(connection, function(error,result){
-            res.render('estudantes/estudantes',{estudantes:result});
-        })
+        controller.getEstudantes(app,req,res);
+
 	});
 }
