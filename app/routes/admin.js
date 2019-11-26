@@ -1,34 +1,21 @@
 module.exports = function(app){
 	
     app.post('/estudante/salvar',function(req,res){
-        let estudante = req.body;
-		let connection = app.config.dbConnection();
-		let estudantesModel = app.app.models.estudantesModel;
-
-		estudantesModel.storeEstudante(estudante, connection, function (error, result) {
-			res.redirect('/estudantes');
-		});
+		let controller = app.app.controllers.estudantesController;
+		//chamar o controller
+		controller.storeEstudante(app,req,res);
 	});
 	
 	app.post('/conteudoProgramatico/salvar',function(req,res){
-        let conteudo = req.body;
-		let connection = app.config.dbConnection();
-		let contProgModel = app.app.models.conteudoProgramaticoModel;
-
-		contProgModel.storeConteudo(conteudo, connection, function (error, result) {
-			res.redirect('/conteudoProgramatico');
-		});
+		let controller = app.app.controllers.conteudoProgramaticoController;
+		//chamar o controller
+		controller.storeConteudo(app,req,res);
 	});
 	
 	app.post('/conteudoProgramatico/excluir', function(req,res){
-		let id = req.body.id;
-		let connection = app.config.dbConnection();
-		let deleteContProgModel = app.app.models.conteudoProgramaticoModel;
-
-		deleteContProgModel.deleteConteudo(id, connection, function(error, result) {
-			res.redirect('/conteudoProgramatico');
-		});
+		let controller = app.app.controllers.conteudoProgramaticoController;
+		//chamar o controller
+		controller.deleteConteudo(app,req,res);		
 	})
 
-	// conts[i].idconteudoprogramatico
 }
