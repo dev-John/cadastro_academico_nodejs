@@ -8,7 +8,6 @@ module.exports = function(app){
 	})
 
 	app.post('listarNotas', function(req,res){
-		console.log("eeee")
 		res.render('/notas');
 	})
 

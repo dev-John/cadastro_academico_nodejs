@@ -12,6 +12,7 @@ module.exports = function(){
     }
 
     this.storeEstudante = function(estudante, connection, callback){
+        console.log(estudante)
         connection.query('insert into estudantes set ?',estudante, callback);
     }
 

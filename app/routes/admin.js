@@ -1,3 +1,5 @@
+const {check, validationResult } = require('express-validator');
+
 module.exports = function(app){
 	
     app.post('/estudante/salvar',function(req,res){

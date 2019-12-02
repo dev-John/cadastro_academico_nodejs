@@ -6,7 +6,6 @@ module.exports = function () {
         let estudantesModel = app.app.models.estudantesModel;
     
         estudantesModel.getEstudantes(db, function(error,result){
-            console.log(error)
             res.render('estudantes/estudantes',{estudantes:result});
         })
 
