@@ -1,4 +1,7 @@
+create database dsw;
 use dsw;
+
+grant all privileges on *.* to 'parsa'@'localhost';
 
 CREATE TABLE `professores` ( 
 	`idprofessores` INT NOT NULL AUTO_INCREMENT,  
@@ -47,3 +50,4 @@ CREATE TABLE `DSW`.`usuarios` (
     PRIMARY KEY (`idusuario`)
 );
 
+select * from usuarios;

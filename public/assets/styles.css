@@ -1,7 +1,12 @@
 .custom-jumbo{
-    width: 80%;
+    width: 87%;
     margin: auto;
     margin-top: 10px;
+}
+
+.custom-container {
+    width: 43%;
+    margin-top: 2%;
 }
 
 .jumbo-padding {
@@ -25,4 +30,8 @@ opacity: 0;
     padding: 3px 5px;
     box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
     width: 190px;
+}
+
+.min-p {
+    width: min-content;
 }
