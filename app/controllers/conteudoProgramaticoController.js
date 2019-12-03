@@ -11,9 +11,6 @@ module.exports = function () {
     }
 
     this.storeConteudo = function(app,req,res) {
-
-        // check('conteudo').isLength({ min: 5}).withMessage('Este campo não deve estar vazio!(Mínimo de 5 caracteres..)'),
-        // check('data').isLength({ min:1}).withMessage('Data é obrigatório!')
         
         let conteudo = req.body;
         let db = app.config.dbConnection();
@@ -37,21 +34,3 @@ module.exports = function () {
   
     return this;
 }
-
-// app.post('/conteudoProgramatico/salvar',function(req,res){
-//     let conteudo = req.body;
-//     let connection = app.config.dbConnection();
-//     let contProgModel = app.app.models.conteudoProgramaticoModel;
-
-//     contProgModel.storeConteudo(conteudo, connection, function (error, result) {
-//         res.redirect('/conteudoProgramatico');
-//     });
-// });
-
-// this.storeConteudo = function(conteudoprogramatico, connection, callback){
-//     connection.query('insert into conteudoprogramatico set ?',conteudoprogramatico, callback);
-// }
-
-// this.deleteConteudo = function(id, connection, callback){
-//     connection.query('delete from conteudoprogramatico where idconteudoprogramatico = ?', id, callback);
-// }
