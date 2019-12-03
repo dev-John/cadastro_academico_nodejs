@@ -21,7 +21,7 @@ insert into estudantes (nome, nota) values('Roberto Santos', 10);
 insert into estudantes (nome, nota) values('Ana Maria', 10);
 
 delete from estudantes;
-
+drop table estudantes;
 select * from estudantes;
 
 CREATE TABLE `dsw`.`conteudoprogramatico` ( 
@@ -33,3 +33,17 @@ CREATE TABLE `dsw`.`conteudoprogramatico` (
 );	
 
 select * from conteudoprogramatico;
+
+Alter table estudantes add column data_nasc date;
+Alter table estudantes add column cidade varchar(50);
+Alter table estudantes add column email varchar(50);
+
+CREATE TABLE `DSW`.`usuarios` ( 
+	`idusuario` INT NOT NULL AUTO_INCREMENT,   
+    `nome` VARCHAR(45) NOT NULL,   
+    `username` VARCHAR(20) NOT NULL,   
+    `password` VARCHAR(20) NOT NULL, 
+    timestamp TIMESTAMP,   
+    PRIMARY KEY (`idusuario`)
+);
+

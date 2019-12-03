@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Formulário de Inclusão de Estudantes</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	 crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+	 crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<section class="container">
+		<h2 class="text-center">Formulário para inclusão de usuários</h2>
+		<section>
+			<% if(erros.length > 0) { %>
+			<section class="alert alert-danger">
+				<p>Atenção!</p>
+				<ul>
+					<% for(let i = 0; i < erros.length; i++){ %>
+					<li>
+						<%= erros[i].msg %>
+					</li>
+					<% } %>
+				</ul>
+			</section>
+			<% } %>
+		</section>
+		<form class="form" action="/usuario/salvar" method="post">
+			<div class="form-group">
+				<input type="text" class="form-control" name="nome" placeholder="Digite o nome do usuário" value="<%= usuario.nome %>">
+			</div>
+			<div class="form-group">
+				<input type="text" class="form-control" name="username" placeholder="Usuário" value="<%= usuario.username %>">
+			</div>
+			<div class="form-group">
+				<input type="password" class="form-control" name="password" placeholder="Senha" value="<%= usuario.password %>">
+			</div>
+			<div class="form-group">
+				<input type="submit" value="enviar">
+			</div>
+		</form>
+	</section>
+</body>
+
+</html>

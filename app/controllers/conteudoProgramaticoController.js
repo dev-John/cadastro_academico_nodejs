@@ -11,6 +11,10 @@ module.exports = function () {
     }
 
     this.storeConteudo = function(app,req,res) {
+
+        // check('conteudo').isLength({ min: 5}).withMessage('Este campo não deve estar vazio!(Mínimo de 5 caracteres..)'),
+        // check('data').isLength({ min:1}).withMessage('Data é obrigatório!')
+        
         let conteudo = req.body;
         let db = app.config.dbConnection();
         let conteudoProgramaticoModel = app.app.models.conteudoProgramaticoModel;
