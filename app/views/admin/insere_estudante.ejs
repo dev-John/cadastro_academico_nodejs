@@ -7,10 +7,22 @@
             <link rel="stylesheet" type="text/css" href="/public/assets/styles.css" />
 		</head>
 	<body>
-		<form action="estudante/salvar" method="post">
+		<form action="/estudante/salvar" method="post">
 			<div class="container jumbotron custom-jumbo">
 				<h1 class="display-4">Cadastrar Estudante</h1>
 				<hr class="my-4">
+
+				<section>
+					<% if(erros) { %>
+					   <ul>
+						   <%for(let i = 0; i < erros.length; i++){%>
+							   <li>
+								   <%= erros[i].msg %>
+							   </li>
+						   <% } %>
+					   </ul>
+					<% } %>
+				</section>
 
 				<div class="form-group">
 					<label for="conteudo">Nome:</label>
