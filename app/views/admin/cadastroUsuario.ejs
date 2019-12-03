@@ -12,8 +12,8 @@
 	<script>
 		$(document).ready(function() {
 			console.log("Teste");
-			$("#btn-sair").click(function () {
-				window.location.href = "/sair";
+			$("#login").click(function () {
+				window.location.href = "/login";
 			})
 		})
 	</script>
@@ -70,10 +70,10 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-xs-6">
-								<p class="lead min-p">Já tem conta?</p>
+								<p class="lead min-p" id="login">Já tem conta?</p>
 							</div>
 							<div class="col-xs-6 ml-4 mt-2">
-								<button class="btn btn-secondary btn-lg">Login</button>
+								<a class="btn btn-secondary btn-lg" href="/login" btn-lg">Login</a>
 							</div>
 						</div>
 					</div>
